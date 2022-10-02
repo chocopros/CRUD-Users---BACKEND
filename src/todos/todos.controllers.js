@@ -7,7 +7,7 @@ const usersDB = [
     {
         id: 'c0f6a7c2-e462-47a5-b62b-901ad7c467fa',
         first_name: 'Jesús',
-        last_name: 'Arechiderg',
+        last_name: 'Arechider',
         email: 'jesuschock93@gmail.com',
         password: 'ja1234',
         birthday: '1993/12/01',
@@ -24,9 +24,10 @@ const getAllUsers = () =>{
     return usersDB
 };
 
-// Getting All DB users
+// Getting users for ID
 const getUserById = id => {
-    const userById = usersDB.find(user => user.id === id)
+    const getIdParams = String(id)
+    const userById = usersDB.find(user => user.id = getIdParams)
     return userById
 };
 
@@ -69,3 +70,6 @@ module.exports = {
 
     //New User
 //console.log(createNewUser("anmy","moreno","anmy@gmail.com","am1234","1990/15/15"))
+
+    //Find a User existent
+console.log(getUserById("c0f6a7c2-e462-47a5-b62b-901ad7c467f"))

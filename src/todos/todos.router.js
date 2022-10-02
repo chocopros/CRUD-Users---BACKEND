@@ -9,10 +9,10 @@ const todoServices = require('./todos.services')
 /*************** GETTING INFO USERS ******************/
 
 // /users [>>GET<<, POST]
-router.get('/users', todoServices.getUserID)
+router.get('/users', todoServices.getUsers)
 
 // /users/:id [GET]
-router.get('/users/:id')
+router.get('/users/:id', todoServices.getUserID)
 
 
 /*************** POSTING INFO NEW USERS ******************/

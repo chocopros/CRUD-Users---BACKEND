@@ -1,5 +1,5 @@
 // Import & destructuring function created in todos.controllers
-const {getAllUsers,getUserById,createNewUser} = require('./todos.controllers')
+const {getAllUsers, getUserById, createNewUser} = require('./todos.controllers')
 
 
 /*********************** GETTING - info ************************/
@@ -7,17 +7,22 @@ const {getAllUsers,getUserById,createNewUser} = require('./todos.controllers')
 // service for getting all user exists
 const getUsers = (req, res) => {
     const usersAll = getAllUsers()
-    res.status(200).json(usersAll)
+    res.status(200).json({
+        pag_initial: "http://127.0.0.1:9000/",
+        usersAll})
 };
 
 
 //service for getting only or exclusive ID of a user
 const getUserID = (req, res) => {
-    const idUser = String(req.params.id)
+    const idUser = req.params.id
     const infoUser = getUserById(idUser)
 
     if (infoUser) {
-        res.status(200).json(infoUser)
+        res.status(200).json({
+            pageMenuUsers: "http://127.0.0.1:9000/users",
+            infoUser
+        })
     } else {
         res.status(404).json({message: "ID USER: does not exist"})
     }
