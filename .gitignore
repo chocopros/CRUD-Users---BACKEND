@@ -1,0 +1,3 @@
+# Ignore file express, -D nodemon, uuid
+
+node_modules

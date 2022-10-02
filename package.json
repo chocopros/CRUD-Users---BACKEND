@@ -1,0 +1,21 @@
+{
+  "name": "crud-users-with-mvc-model",
+  "version": "1.0.0",
+  "description": "crud MVC model",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/app.js",
+    "dev": "nodemon src/app.js"
+  },
+  "keywords": ["crud","MVC","jesuschock93"],
+  "author": "Jesuschock",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.1",
+    "uuid": "^9.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
