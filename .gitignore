@@ -1,3 +1,3 @@
-# Ignore file express, -D nodemon, uuid
+# Ignore file dependencies express, -D nodemon, uuid
 
 node_modules
