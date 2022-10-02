@@ -45,6 +45,7 @@ const createNewUser = (first_name, last_name, email, password, birthday) => {
         is_active: true,
         url: `http://127.0.0.1:9000/users/${uuidGenerate}`
     }
+    newUser.push(usersDB)
 
     return newUser
 
@@ -59,5 +60,12 @@ module.exports = {
 }
 
 
+/************** TEST ******************/
+    //Geting all Users
+//console.log(getAllUsers())
 
+    //Generate UUID
+//? console.log(uuid.v4())
 
+    //New User
+//console.log(createNewUser("anmy","moreno","anmy@gmail.com","am1234","1990/15/15"))
