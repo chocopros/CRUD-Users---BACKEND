@@ -34,12 +34,7 @@ const getUserID = (req, res) => {
 
 const createUser = (req, res) => {
 
-    const { 
-        first_name, 
-        last_name, 
-        email, 
-        password, 
-        birthday } = req.body
+    const { first_name, last_name, email, password, birthday } = req.body
 
     if ( first_name && last_name && email && password && birthday ) {
         const infoNewUser = createNewUser

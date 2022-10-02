@@ -13,6 +13,15 @@ const usersDB = [
         birthday: '1993/12/01',
         is_active: true,
         url: `http://127.0.0.1:9000/users/c0f6a7c2-e462-47a5-b62b-901ad7c467fa`
+    },{
+        id: "62611de8-69f4-4fa3-a5c5-88cdb3b7e06e",
+        first_name: "anmy",
+        last_name: "moreno",
+        email: "anmy@gmail.com",
+        password: "am1234",
+        birthday: "1990-12-12",
+        is_active: true,
+        url: "http://127.0.0.1:9000/users/62611de8-69f4-4fa3-a5c5-88cdb3b7e06e"
     }
 ];
 
@@ -27,7 +36,7 @@ const getAllUsers = () =>{
 // Getting users for ID
 const getUserById = id => {
     const getIdParams = String(id)
-    const userById = usersDB.find(user => user.id = getIdParams)
+    const userById = usersDB.find(user => user.id === getIdParams)
     return userById
 };
 
@@ -46,7 +55,7 @@ const createNewUser = (first_name, last_name, email, password, birthday) => {
         is_active: true,
         url: `http://127.0.0.1:9000/users/${uuidGenerate}`
     }
-    newUser.push(usersDB)
+    usersDB.push(newUser)
 
     return newUser
 
@@ -66,10 +75,12 @@ module.exports = {
 //console.log(getAllUsers())
 
     //Generate UUID
-//? console.log(uuid.v4())
+// console.log(uuid.v4())
 
     //New User
-//console.log(createNewUser("anmy","moreno","anmy@gmail.com","am1234","1990/15/15"))
+// console.log(createNewUser("anmy","moreno","anmy@gmail.com","am1234","1990/15/15"))
+// console.log(getAllUsers())
 
     //Find a User existent
-console.log(getUserById("c0f6a7c2-e462-47a5-b62b-901ad7c467f"))
+//console.log(getUserById("c0f6a7c2-e462-47a5-b62b-901ad7c467f"))
+//console.log(getUserById("62611de8-69f4-4fa3-a5c5-88cdb3b7e06e"))
